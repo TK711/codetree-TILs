@@ -12,7 +12,7 @@ for idx, i in enumerate(range(num), start = 1):
     hei, wei = tuple(input().split())
     stds.append(st(int(hei),int(wei),idx))
 
-stds.sort(key = lambda x: (x.W,-x.H))
+stds.sort(key = lambda x: (x.H,-x.W))
 
 for x in stds:
     print("%d %d %d" % (x.H,x.W,x.I))
