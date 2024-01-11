@@ -12,59 +12,27 @@ elasped_day = 0
 # m2, d2 = ?
 #m1 d1 > m2 d2
 
-if m1 < m2:
-    while True:
-        if m1 == m2 and d1 == d2:
-            break
-        else:
-            d1 += 1
-            elasped_day += 1
-        # month calculation had difficulty
+# 접근 틀림!
 
-        if d1 >= num_of_days[m1]:
+while not (m1 == m2 and d1 == d2):
+    if m1 < m2 or (m1 == m2 and d1 < d2):
+        d1 += 1
+        elasped_day += 1
+        if d1 > num_of_days[m1-1]:
             m1 += 1
-            d1 = 0
-elif m1 == m2 and d1 <= d2:
-    while True:
-        if m1 == m2 and d1 == d2:
-            break
-        else:
-            d1 += 1
-            elasped_day += 1
-        # month calculation had difficulty
-
-        if d1 >= num_of_days[m1]:
-            m1 += 1
-            d1 = 0
-elif m1 == m2 and d1 > d2:
-    while True:
-        if m1 == m2 and d1 == d2:
-            break
-        else:
-            d1 -= 1
-            elasped_day += 1
-        # month calculation had difficulty
-
-        if d1 <= 0:
+            d1 = 1
+    else:
+        d1 -= 1
+        elasped_day -= 1
+        if d1 < 1:
             m1 -= 1
             d1 = num_of_days[m1]
-    elasped_day += 5
-elif m1 > m2 or m1 == m2 and d1 >= d2:
-    while True:
-        if m1 == m2 and d1 == d2:
-            break
-        else:
-            d1 -= 1
-            elasped_day += 1
-        # month calculation had difficulty
 
-        if d1 <= 0:
-            m1 -= 1
-            d1 = num_of_days[m1]
-    elasped_day += 5
 #elif m1 < m2 or m1 == m2 and d1 < d2:
 
     #1  2  3  4  5  6  7
     #8  9 10 11 12 13 14
 
-print(name_of_days[elasped_day%7])
+print(name_of_days[(elasped_day)%7])
+
+#
