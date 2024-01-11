@@ -27,7 +27,8 @@ while not (m1 == m2 and d1 == d2):
             m1 -= 1
             d1 = num_of_days[m1]
 
-day = elasped_day/7
+elasped_day = abs(elasped_day)
+day = elasped_day//7
 remain = elasped_day%7
 
 for idx, i in enumerate(name_of_days):
