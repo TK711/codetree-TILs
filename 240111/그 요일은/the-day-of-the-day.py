@@ -31,9 +31,11 @@ elasped_day = abs(elasped_day)
 day = elasped_day//7
 remain = elasped_day%7
 
-for idx, i in enumerate(name_of_days):
-    if mat_day == i:
-        day = idx
+print("elasped_day",elasped_day)
+print("day",day)
+print("remain",remain)
+
+
 if day <= remain:
     day += 1
 
