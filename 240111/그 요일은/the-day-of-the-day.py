@@ -31,11 +31,6 @@ elasped_day = abs(elasped_day)
 day = elasped_day//7
 remain = elasped_day%7
 
-print("elasped_day",elasped_day)
-print("day",day)
-print("remain",remain)
-
-
 if day <= remain:
     day += 1
 
