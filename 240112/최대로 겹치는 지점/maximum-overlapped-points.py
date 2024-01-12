@@ -17,7 +17,8 @@ for i in range(num):
 
 for i in lst2:
     for j in range(int(i[0]),int(i[1]+1)):
-        lst[j] += 1
+        if not j > len(lst2)+1:
+            lst[j] += 1
 
 for i in range(1,len(lst)):
     if mx < lst[i]:
