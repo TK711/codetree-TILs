@@ -1,6 +1,6 @@
 num = int(input())
 
-lst = [0] * 100
+lst = [0] * 101
 lst2 = []
 mx = 0
 
@@ -9,8 +9,6 @@ for i in range(num):
     a1,a2 = int(a1),int(a2)
 
     lst2.append([a1,a2])
-    if a1 == a2:
-        lst2.append([a1,a1+1])
 
 # 각 리스트내 범위 돌며 체크
 # 오프셋 절댓값을 추가한다
