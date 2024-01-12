@@ -10,9 +10,11 @@ for i in range(num):
     a1,a2 = int(a1),int(a2)
     if a1 <0:
         if abs(a1)>offset:
-            a1 = offset
+            offset = abs(a1)
 
     lst2.append([a1,a2])
+    if a1 == a2:
+        lst2.append([a1,a1+1])
 
 # 각 리스트내 범위 돌며 체크
 # 오프셋 절댓값을 추가한다
