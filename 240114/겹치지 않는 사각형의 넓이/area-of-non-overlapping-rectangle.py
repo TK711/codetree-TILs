@@ -1,6 +1,6 @@
 #num = int(input())
 
-leng = 21
+leng = 2001
 count = 0
 maxx, minx, maxy, miny = 0, leng+1, 0, leng+1
 
