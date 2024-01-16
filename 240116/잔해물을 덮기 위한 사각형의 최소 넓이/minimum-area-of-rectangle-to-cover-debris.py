@@ -19,9 +19,4 @@ for x3 in range(2001):
         if cor[x3][y3] == 1:
             lst3.append([x3,y3])
 
-lst3_x = sorted(lst3,key=lambda x: x[0])
-lst3_y = sorted(lst3,key=lambda x: x[1])
-# #print(lst3_x)
-# print(max(lst3_x),min(lst3_x))
-#print(max(lst3_y)[1],min(lst3_y)[1])
-print((max(lst3_x)[0]-min(lst3_x)[0]) * (max(lst3_y)[1]-min(lst3_y)[1]))
+print((max(lst3, key=lambda x: x[0])[0] - min(lst3, key=lambda x: x[0])[0]) * (max(lst3, key=lambda x: x[1])[1] - min(lst3, key=lambda x: x[1])[1]))
