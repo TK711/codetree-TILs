@@ -18,5 +18,7 @@ for x3 in range(2001):
     for y3 in range(2001):
         if cor[x3][y3] == 1:
             lst3.append([x3,y3])
-
-print((max(lst3, key=lambda x: x[0])[0] - min(lst3, key=lambda x: x[0])[0]) * (max(lst3, key=lambda x: x[1])[1] - min(lst3, key=lambda x: x[1])[1]))
+if lst3 != []:
+    print((max(lst3, key=lambda x: x[0])[0] - min(lst3, key=lambda x: x[0])[0]) * (max(lst3, key=lambda x: x[1])[1] - min(lst3, key=lambda x: x[1])[1]))
+else:
+    print(0)
