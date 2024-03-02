@@ -13,7 +13,6 @@ while True:
         lst = []
         break
     for idx, i in enumerate(lst):
-        print(lst2)
         if not i == prev:
             if cnt >= M:
                 flag = False
