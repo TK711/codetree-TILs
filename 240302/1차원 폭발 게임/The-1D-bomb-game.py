@@ -9,7 +9,11 @@ while True:
     cnt = 1
     lst2 = []
     flag = True
+    if M == 1:
+        lst = []
+        break
     for idx, i in enumerate(lst):
+        print(lst2)
         if not i == prev:
             if cnt >= M:
                 flag = False
@@ -27,6 +31,7 @@ while True:
     lst = lst2
     if flag == True:
         break
+
 
 if lst:
     print(len(lst))
