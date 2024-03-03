@@ -2,19 +2,18 @@ k, n = map(int,input().split())
 ans = []
 
 def print_ans():
-    if len(ans) != 1:
-        prev = ans[0]
-        flag = True
-        for i in ans:
-            if not i == prev:
+    flag = True
+    for i in range(len(ans)):
+        if i + 2 < len(ans):
+            if ans[i] == ans[i+1] == ans[i+2]:
                 flag = False
-        if flag == False:
-            for elem in ans:
-                print(elem,end = " ")
-            print()
-    else:
-        print(ans[0])
+    if flag == True:
+        for elem in ans:
+            print(elem,end = " ")
+        print()
+
 def choose(curr_num):
+    # print(curr_num,ans,n)
     if curr_num == n + 1:
         print_ans()
         return
