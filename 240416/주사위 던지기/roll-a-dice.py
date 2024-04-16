@@ -55,7 +55,7 @@ for order in orders:
     mp[curr_y][curr_x] = curr_num
 
 tot = 0
-for x in range(n):
-    for y in range(n):
+for x in range(n+1):
+    for y in range(n+1):
        tot += mp[x][y]
 print(tot)
