@@ -1,3 +1,10 @@
+# 1 = / and 2 = \
+# 1 = right and down, left and up /
+# 2 = right and up, left and down \
+
+
+#        up    down  right  left
+# dire = [[1,0],[-1,0],[0,1],[0,-1]]
 def pinball(y,x,dr,time):
     # print(f'y, {y} x, {x} dr, {dr} time {time}')
     global mx
@@ -38,36 +45,32 @@ size = int(input())
 mp = list(list(map(int, input().split())) for _ in range(size))
 
 
-# approach => check approach dir
-# u, d, l, r, reflex by approach dirs
-#        0      1      2     3
-#        up    down  right  left
 dire = [[-1,0],[1,0],[0,1],[0,-1]]
 mx = 0
-# approach form all dirs
+
 mx = 0
 time = 0
 # top
-for i in range(5):
+for i in range(size):
     a = 0
     b = 0
     pinball(a,b + i,1,1)
 
 # left side
-for i in range(5):
+for i in range(size):
     a = 0
     b = 0
     pinball(a+i, b,2,1)
 
 # right side
-for i in range(5):
+for i in range(size):
     a = 0
-    b = 4
+    b = size-1
     pinball(a + i, b, 3, 1)
 
 # bottom side
-for i in range(5):
-    a = 4
+for i in range(size):
+    a = size-1
     b = 0
     pinball(a, b + i, 0, 1)
 
