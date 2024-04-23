@@ -8,37 +8,40 @@
 def pinball(y,x,dr,time):
     # print(f'y, {y} x, {x} dr, {dr} time {time}')
     global mx
-    if mp[y][x] == 0:
-        pass
-    elif mp[y][x] == 1:
-        if dr == 0:
-            dr = 2
-        elif dr == 1:
-            dr = 3
-        elif dr == 2:
-            dr = 0
-        elif dr == 3:
-            dr = 1
-    elif mp[y][x] == 2:
-        if dr == 0:
-            dr = 3
-        elif dr == 1:
-            dr = 2
-        elif dr == 2:
-            dr = 1
-        elif dr == 3:
-            dr = 0
+    while True:
 
-    # go 1 step and check
-    if 0 <= y + dire[dr][0] < size and 0 <= x + dire[dr][1] < size:
-        # inside
-        pinball(y + dire[dr][0], x + dire[dr][1], dr, time +1)
-    else:
-        # outside
-        # break
-        if time > mx:
-            mx = time
-        return
+        if mp[y][x] == 1:
+            if dr == 0:
+                dr = 2
+            elif dr == 1:
+                dr = 3
+            elif dr == 2:
+                dr = 0
+            elif dr == 3:
+                dr = 1
+        elif mp[y][x] == 2:
+            if dr == 0:
+                dr = 3
+            elif dr == 1:
+                dr = 2
+            elif dr == 2:
+                dr = 1
+            elif dr == 3:
+                dr = 0
+
+        # go 1 step and check
+        if 0 <= y + dire[dr][0] < size and 0 <= x + dire[dr][1] < size:
+            # inside
+            y = y + dire[dr][0]
+            x = x + dire[dr][1]
+            time += 1
+            # pinball(y + dire[dr][0], x + dire[dr][1], dr, time +1)
+        else:
+            # outside
+            # break
+            if time > mx:
+                mx = time
+            break
 
 
 size = int(input())
