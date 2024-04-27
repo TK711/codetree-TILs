@@ -6,11 +6,12 @@ for tc in range(1,int(input())+1):
 
     lst = ['N']
     for k in range(1,m+1):
+        # print(k)
         y, x, dr = list(input().split())
         x, y = int(x), int(y)
+        # print(x,y,dr)
         mp[y][x] = k
         lst.append(dr)
-
 
     for _ in range(2*m+3):
         new_mp = [[0] * (n+1) for _ in range(n+1)]
@@ -37,7 +38,10 @@ for tc in range(1,int(input())+1):
                         else:
                             new_mp[new_y][new_x] = 0
                     else:
-                        new_mp[i][j] = num
+                        if new_mp[i][j] ==0:
+                            new_mp[i][j] = num
+                        else:
+                            new_mp[i][j] = 0
                         if lst[num] == 'U':
                             lst[num] = 'D'
                         elif lst[num] == 'D':
@@ -49,6 +53,7 @@ for tc in range(1,int(input())+1):
         for i in range(n+1):
             for j in range(n + 1):
                 mp[i][j] = new_mp[i][j]
+
 
     cnt = 0
 
