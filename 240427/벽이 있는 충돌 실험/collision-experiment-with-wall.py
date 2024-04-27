@@ -12,7 +12,7 @@ for tc in range(1,int(input())+1):
         lst.append(dr)
 
 
-    for _ in range(2*m+1):
+    for _ in range(2*m+3):
         new_mp = [[0] * (n+1) for _ in range(n+1)]
         for i in range(n + 1):
             for j in range(n + 1):
