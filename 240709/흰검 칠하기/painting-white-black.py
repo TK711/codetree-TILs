@@ -1,7 +1,7 @@
 rnds = int(input())
-rng = 201#001
+rng = 200001
 lst = [[0] for _ in range(rng)]
-pivot = 100#000
+pivot = 100000
 total_white = 0
 total_black = 0
 total_gray = 0
