@@ -1,7 +1,7 @@
 num = int(input())
 
-mx = 100
-pivot = 50
+mx = 1000
+pivot = 500
 lst = [[0] for _ in range(mx *2 +1)]
 
 for _ in range(num):
