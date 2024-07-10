@@ -2,7 +2,7 @@ num = int(input())
 
 mx = 1000
 pivot = 500
-lst = [[0] for _ in range(mx *2 +1)]
+lst = [ 0 for _ in range(mx * 2 +1)]
 
 for _ in range(num):
     dist, dire = input().split()
