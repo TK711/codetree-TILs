@@ -7,7 +7,7 @@ lst = [[0 for _ in range(n)] for _ in range(n) ]
 
 dx = [0,1,-1,0]
 dy = [1,0,0,-1]
-dire = {'D':0,'L':1,'R':2,'U':3}
+dire = {'D':0,'R':1,'L':2,'U':3}
 direction = dire[d]
 for _ in range(t):    
     nc, nr = c + dx[direction], r + dy[direction]
