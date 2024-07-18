@@ -13,9 +13,10 @@ for _ in range(m):
     for i in range(4):
         check_r = r + dy[i]
         check_c = c + dx[i]
-        if 0 <= check_c < n and 0 <= check_r < n and lst[check_r][check_c] == 1:
-            tot += 1
-    if tot >= 3:
+        if 0 <= check_c < n and 0 <= check_r < n:
+            if lst[check_r][check_c] == 1:
+                tot += 1
+    if tot == 3:
         print(1)
     else:
         print(0)
