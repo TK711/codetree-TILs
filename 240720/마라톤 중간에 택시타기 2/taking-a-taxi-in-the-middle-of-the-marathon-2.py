@@ -17,17 +17,28 @@ shortest = 200001
 for k in range(1,n-1):
     tot = 0
 
-    for cal in range(1,n):
-        # cal is ahead
-        if cal != k:
-            tot += abs(ord_lst[cal][0] - ord_lst[cal-1][0]) + abs(ord_lst[cal][1] - ord_lst[cal-1][1])
-        # skip point +1
-        # connect skip point -1 and skip point +1
-        elif cal != k+1:
-            tot += abs(ord_lst[cal][0] - ord_lst[cal-2][0]) + abs(ord_lst[cal][1] - ord_lst[cal-2][1])
-        # skip point
-        else:
-            pass
+# get new list
+    nw_lst = []
+    for a in range(n):
+        if a != k:
+            nw_lst.append(ord_lst[a])
+
+    for cal in range(1,n-1):
+        tot += abs(nw_lst[cal][0] - nw_lst[cal-1][0]) + abs(nw_lst[cal][1] - nw_lst[cal-1][1])
     if shortest > tot:
         shortest = tot
+
+    # for cal in range(1,n):
+    #     # cal is ahead
+    #     if cal != k:
+    #         tot += abs(ord_lst[cal][0] - ord_lst[cal-1][0]) + abs(ord_lst[cal][1] - ord_lst[cal-1][1])
+    #     # skip point +1
+    #     # connect skip point -1 and skip point +1
+    #     elif cal != k+1:
+    #         tot += abs(ord_lst[cal][0] - ord_lst[cal-2][0]) + abs(ord_lst[cal][1] - ord_lst[cal-2][1])
+    #     # skip point
+    #     else:
+    #         pass
+    # if shortest > tot:
+    #     shortest = tot
 print(shortest)
