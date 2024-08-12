@@ -4,9 +4,11 @@ curr_y = 100000
 
 dir_x = [0,1,0,-1]
 dir_y = [-1,0,1,0]
-dire = 0
 
 dire = 0
+ans = 0
+dire = 0
+
 lst = input()
 for idx, i in enumerate(lst):
     if i == "F":
@@ -15,7 +17,7 @@ for idx, i in enumerate(lst):
         if 0 < new_x < 200002 and 0 < new_y < 200002:
             curr_x = new_x
             curr_y = new_y
-            if curr_x == 100000 and curr_y == 100000:
+            if curr_x == 100000 and curr_y == 100000 and ans == 0:
                 ans = idx
     elif i == 'L':
         dire = (dire - 1)%4
