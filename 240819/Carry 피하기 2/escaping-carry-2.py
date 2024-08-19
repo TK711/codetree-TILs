@@ -53,4 +53,7 @@ for i1 in range(len(lst)):
             stk.pop()
         stk.pop()
     stk.pop()
-print(ans)
+if ans == 0:
+    print(-1)
+else:
+    print(ans)
