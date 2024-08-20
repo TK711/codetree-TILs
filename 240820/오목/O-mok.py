@@ -23,7 +23,7 @@ for y in range(19):
                     new_x = x + dire_x[dr] * nxt
                     new_y = y + dire_y[dr] * nxt
                     # if in range and got same number
-                    if new_x < 18 and new_y < 18 and lst[new_y][new_x]==comp:
+                    if new_x < 19 and new_y < 19 and lst[new_y][new_x]==comp:
                         continue
                     else:
                         flg = False
