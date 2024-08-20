@@ -1,7 +1,7 @@
 lst = []
 # t0 check 3 angle, to right, 45 right-down, down
-dire_x = [1,1,0]
-dire_y = [0,1,1]
+dire_x = [1,1,0,-1]
+dire_y = [0,1,1,1]
 comp_win = 0
 loc_x = 0
 loc_y = 0
@@ -16,14 +16,14 @@ for y in range(19):
         if lst[y][x] != "0":
             comp = lst[y][x]
             # check 3 angle, to right, 45 right-down, down
-            for dr in range(3):
+            for dr in range(4):
                 flg = True
                 # check 4 positions of same direction
                 for nxt in range(1,5):
                     new_x = x + dire_x[dr] * nxt
                     new_y = y + dire_y[dr] * nxt
                     # if in range and got same number
-                    if new_x < 19 and new_y < 19 and lst[new_y][new_x]==comp:
+                    if 0 <= new_x < 19 and 0 <=  new_y < 19 and lst[new_y][new_x]==comp:
                         continue
                     else:
                         flg = False
