@@ -44,5 +44,5 @@ for turn in range(m):
         # if comp != 0:
         mp[change_y][change_x] = num
         mp[loc_y][loc_x] = comp
-    for ch in range(n):
-        print(*mp[ch])
+for ch in range(n):
+    print(*mp[ch])
