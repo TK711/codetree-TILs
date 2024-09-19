@@ -56,7 +56,11 @@ for turns in range(t):
                         else:
                             mp2[n_y1][n_x1] = 99
                     else:
-                        mp2[y1][x1] =(pos + 1)%4 +1
+                        if mp2[y1][x1] == 0:
+                            mp2[y1][x1] =(pos + 1)%4 +1
+                        else:
+                            mp2[y1][x1] = 99
+                        
                         
         # 중복 제거
         for y2 in range(n):
@@ -78,10 +82,13 @@ for turns in range(t):
     # for k in range(n):
     #     print(mp2[k])
     # print()
+
     for y3 in range(n):
         for x3 in range(n):
             if mp1[y3][x3] != 0:
                 cnt += 1
     ans.append(cnt)
+#     print(cnt)
+# print(ans)
 for count in ans:
     print(count)
