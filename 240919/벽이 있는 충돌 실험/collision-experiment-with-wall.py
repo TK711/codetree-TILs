@@ -36,7 +36,7 @@ for turns in range(t):
     #     print(mp1[k])
 
     # n^2 번만큼 실행
-    for _ in range(n**2):
+    for _ in range(n*2):
         for y1 in range(n):
             for x1 in range(n):
                 # 0이면 바로 다음으로
