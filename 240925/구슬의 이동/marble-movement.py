@@ -32,14 +32,14 @@ for idx in range(m):
 # print()
 # print(marbles)
 
-# for ch in range(t):
-#     print("marbles",marbles)
+for ch in range(t):
+    # print("marbles",marbles)
 
-#     print()
-#     print("mp1")
-#     for tst in mp1:
-#         print(tst)
-#     print()
+    # print()
+    # print("mp1")
+    # for tst in mp1:
+    #     print(tst)
+    # print()
 
     # print("t",t)
     # 이전처럼 지도 2개 사용
