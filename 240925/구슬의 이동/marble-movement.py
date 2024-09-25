@@ -35,12 +35,6 @@ for idx in range(m):
 for ch in range(t):
     # print("marbles",marbles)
 
-    # print()
-    # print("mp1")
-    # for tst in mp1:
-    #     print(tst)
-    # print()
-
     # print("t",t)
     # 이전처럼 지도 2개 사용
     # 각 mp1의 값들 하나씩 이동하여 mp2에 기록
@@ -52,7 +46,7 @@ for ch in range(t):
                 # print("mp1[st_y][st_x][-1]",mp1[st_y][st_x][-1])
                 # 0 전까지 역순으로
                 # print("mp1[st_y][st_x]",mp1[st_y][st_x][1::]) 
-                for num in mp1[st_y][st_x][1::]:
+                for num in mp1[st_y][st_x][1:len(mp1[st_y][st_x]):1]:
                     
                     # print("st_y, st_x, num",st_y, st_x, num)
                     # 각 거리만큼 이동(방향 주의)
@@ -92,17 +86,21 @@ for ch in range(t):
     # mp2의 중복 제거
     for y1 in range(n):
         for x1 in range(n):
-            if len(mp2[y1][x1]) > k:
+            if len(mp2[y1][x1]) > k+1: # 추가된 0
                 # 작은순으로 정렬해서 0 제외 작은 값부터 제거
-                target = mp2[y1][x1]
-                target.sort(reverse=True)
-                # print("target",target)
-                for _ in range(len(target)-k):
-                    target.pop()
-                target.append(0)
+                comp = []
+                for cp in mp2[y1][x1][1::]:
+                    comp.append([marbles[1],cp])
+
+                comp.sort(reverse=True)
+                for _ in range(len(comp)-k):
+                    comp.pop()
+                rt = [0]
+                for ret in comp:
+                    rt.append(ret[1])
                 # print("target after",target)
-                target.sort()
-                mp2[y1][x1] = target
+                rt.sort()
+                mp2[y1][x1] = rt
     
     # print()
     # for tst2 in mp2:
@@ -114,10 +112,6 @@ for ch in range(t):
             mp1[y2][x2] = mp2[y2][x2]
     mp2 = [[[0] for _ in range(n)] for _ in range(n)]
 
-# print("mp1")
-# for tst in mp1:
-#     print(tst)
-# print()
 tot = 0
 for y3 in range(n):
     for x3 in range(n):
