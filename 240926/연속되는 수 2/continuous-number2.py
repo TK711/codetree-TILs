@@ -11,4 +11,6 @@ for _ in range(n):
         if mx < leng:
             mx = leng
         leng = 1
+if mx < leng:
+    mx = leng
 print(mx)
