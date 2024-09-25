@@ -1,5 +1,5 @@
 n = int(input())
-leng = 0
+leng = 1
 mx = 0
 prev = -1
 for _ in range(n):
