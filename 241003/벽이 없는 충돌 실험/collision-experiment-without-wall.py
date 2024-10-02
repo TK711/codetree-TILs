@@ -82,16 +82,19 @@ for _ in range(t):
 
                         lc, ln = [wei, num], [nx_wei, nx_num]
                         # print("lc, ln", lc, ln)
-                        cmp = [[wei, num], [nx_wei, nx_num]]
-                        ans = compare(lc,ln)
+                        ans, rmv = compare(lc,ln)
                         # print("sorted",ans)
+                        # print("rmv",rmv)
                         # sorted(cmp, key=lambda x: (x[0], -x[1]))
                         # ans = cmp[0]
                         # 현재 위치 값이 더큼
-                        if ans == [wei, num]:
+                        if ans[0] == lc[0] and ans[1] == lc[1]:
+                            # print("to go nx_y, nx_x",nx_y, nx_x)
                             del mp1[nx_y, nx_x]
                         # 이동 위치가 더 큼
                         else:
+                            # print("ans,lc",ans,type(ans),lc)
+                            # print("curr mp1[st_y, st_x]",mp1[st_y, st_x])
                             del mp1[st_y, st_x]
                             continue
                     #  지도1의 이동 위치 빔 > pass
@@ -140,7 +143,7 @@ for _ in range(t):
         # print("last_crash before", last_crash)
         # print("sorted mp2")
         # for k in mp2:
-        #     print(k)
+        #     print(k)`
         mp2.clear()
         # print("last_crash after", last_crash)
     if last_crash ==0:
