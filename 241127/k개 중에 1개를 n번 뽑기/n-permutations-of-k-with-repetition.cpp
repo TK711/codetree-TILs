@@ -28,17 +28,4 @@ int main() {
     cin >> K >> N; 
     choose(0); 
     return 0;
-}2019181721222324252627282930
-        choose(cur + 1);
-        ans.pop_back(); 
-    \}
-\}
-
-int main() {
-    First
-    cin >> K >> N; 
-    choose(0); 
-    return 0;
-
-10void choose(int cur) {
-$0
+}
