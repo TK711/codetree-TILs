@@ -54,7 +54,7 @@ void dfs(int idx, int cnt) {
    
     selected.push_back(ladders[idx]);
     dfs(idx + 1, cnt + 1);
-    selected.pop_back(); /
+    selected.pop_back(); 
 }
 
 void calculate_first() {
